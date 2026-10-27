@@ -409,20 +409,27 @@ img {
   color: var(--text-muted);
 }
 
-/* 7 Official Services Grid */
+/* 7 Official Services Grid - 4 above, 3 centered below */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
-  margin-bottom: 60px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .service-card {
+  flex: 0 1 calc(25% - 18px);
+  min-width: 250px;
+  max-width: 265px;
   background: var(--bg-card);
   border: 1px solid var(--border-dark);
   border-radius: var(--radius-md);
   padding: 26px 22px;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -837,6 +844,13 @@ img {
 }
 
 /* Responsive */
+@media (max-width: 1180px) {
+  .service-card {
+    flex: 0 1 calc(50% - 14px);
+    max-width: 340px;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
