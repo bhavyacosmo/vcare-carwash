@@ -338,8 +338,8 @@ img {
 
 .trust-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .trust-item {
@@ -843,6 +843,18 @@ img {
   margin-bottom: 6px;
 }
 
+.policy-btn {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  padding: 12px 28px;
+  text-align: center;
+}
+
+.mobile-menu-phone {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 1180px) {
   .service-card {
@@ -872,6 +884,34 @@ img {
 }
 
 @media (max-width: 768px) {
+  .desktop-phone-btn {
+    display: none !important;
+  }
+  
+  .mobile-menu-phone {
+    display: block;
+    margin-top: 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-dark);
+  }
+  
+  .nav-phone-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-dark);
+    color: var(--brand-blue);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+  }
+
+  .nav-phone-call:hover {
+    background: var(--brand-blue-subtle);
+    border-color: var(--brand-blue-border);
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -880,8 +920,9 @@ img {
     width: 100%;
     background-color: var(--bg-card);
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 24px;
     border-bottom: 1px solid var(--border-dark);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   }
   
   .nav-links.open {
@@ -891,13 +932,39 @@ img {
   .mobile-toggle {
     display: block;
   }
-  
-  .whatsapp-float span {
-    display: none;
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .header-logo-img {
+    height: 52px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .policy-card {
+    padding: 28px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo-img {
+    height: 44px;
   }
   
-  .whatsapp-float {
-    padding: 12px;
-    border-radius: 50%;
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .policy-card {
+    padding: 22px 14px;
+  }
+
+  .btn {
+    white-space: normal;
   }
 }
