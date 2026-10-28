@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Official WhatsApp Number: +971 555 300 500
       const encodedMsg = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/971555300500?text=${encodedMsg}`;
+      const whatsappUrl = `https://wa.me/971507006611?text=${encodedMsg}`;
 
       // Open WhatsApp in new tab / app
       window.open(whatsappUrl, '_blank');
